@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Локальное файловое хранилище</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="drop-area" id="dropArea">
+    Перетащите файлы сюда или нажмите для выбора файлов:
+    <input type="file" id="fileInput" multiple>
+  </div>
+  
+  <div class="filter-area">
+    Фильтры:
+    <input type="number" id="sizeFilter" placeholder="Макс. размер (в КБ)">
+    <select id="typeFilter">
+      <option value="">Все типы</option>
+      <option value="image/png">Изображения</option>
+      <option value="application/pdf">PDF</option>
+      <option value="text/plain">Текстовые файлы</option>
+    </select>
+    <button onclick="filterFiles()">Фильтровать</button>
+  </div>
+
+  <div class="file-list" id="fileList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
